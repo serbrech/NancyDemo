@@ -1,0 +1,13 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+
+@{
+    ViewBag.Title = "Cellar";
+    Layout = "_Layout";
+}
+
+<h1>Cellar</h1>
+<ul>
+@foreach (var bottle in @Model){
+    <li>@bottle.Name - @bottle.Year - <a href="/@bottle.Id">details</a></li>
+}
+</ul>
